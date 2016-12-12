@@ -1,0 +1,25 @@
+{
+    "log":["CRUD+", "REST+", "Changes+", "Attach+"],
+    "databases": {
+        "nraboy": {
+            "server":"walrus:",
+            "sync":`
+                function (doc) {
+                    channel (doc.channels);
+                }
+            `,
+            "users": {
+                "GUEST": {
+                    "disabled": false,
+                    "admin_channels": ["*"]
+                }
+            }
+        }
+    },
+    "CORS": {
+        "Origin": ["http://localhost:4200"],
+        "LoginOrigin": ["http://localhost:4200"],
+        "Headers": ["Content-Type"],
+        "MaxAge": 17280000
+    }
+}

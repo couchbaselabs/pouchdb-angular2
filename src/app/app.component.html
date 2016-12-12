@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<input type="text" placeholder="Username" [(ngModel)]="form.username" />
+<input type="text" placeholder="First Name" [(ngModel)]="form.firstname" />
+<input type="text" placeholder="Last Name" [(ngModel)]="form.lastname" />
+<button (click)="insert()">Add</button>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people">
+            <td>{{ person.firstname }}</td>
+            <td>{{ person.lastname }}</td>
+        </tr>
+    </tbody>
+</table>

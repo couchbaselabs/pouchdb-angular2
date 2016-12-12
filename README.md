@@ -1,31 +1,41 @@
-# PouchProject
+# PouchDB, Angular 2, and Couchbase Example
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
+Example project for synchronizing documents between platforms and Couchbase with only Angular 2 and PouchDB.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## The Requirements
 
-## Code scaffolding
+This project depends on the following dependencies in order to be successful:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+* Node.js 4.0+
+* Angular 2 CLI
+* Couchbase Sync Gateway
 
-## Build
+To develop Angular 2 applications you need the Angular CLI which is downloadable via the Node Package Manager (NPM) found in Node.js.  For synchronization at least one Couchbase Sync Gateway instance must be available.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Installation and Configuration
 
-## Running unit tests
+Download the project from GitHub and execute the following to download all of the Angular 2 project dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install
+```
 
-## Running end-to-end tests
+With the dependencies installed, use launch Sync Gateway with the **sync-gateway-config.json** configuration file found at the root of the project.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+In the project's **src/app/app.component.ts** file, change the hostname to match that of your Sync Gateway instance.
 
-## Deploying to Github Pages
+The project can be sampled by executing:
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+```
+ng serve
+```
 
-## Further help
+The above command will serve the application at http://www.localhost:4200.
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Resources
+
+Couchbase - [http://www.couchbase.com](http://www.couchbase.com)
+
+PouchDB - [https://pouchdb.com](https://pouchdb.com)
+
+Angular 2 - [https://angular.io](https://angular.io)
