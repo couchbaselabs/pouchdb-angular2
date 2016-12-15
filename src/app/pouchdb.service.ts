@@ -45,6 +45,8 @@ export class PouchDBService {
             live: true
         }).on('change', change => {
             this.listener.emit(change);
+        }).on('error', error => {
+            console.error(JSON.stringify(error));
         });
     }
 
